@@ -12,7 +12,7 @@ class OpenAIAPIService {
         val completionRequest = CompletionRequest(
             model = ModelId("text-davinci-003"),
             prompt = promt,
-//            maxTokens = 1024,
+            maxTokens = 2048,
             topP = 0.5,
         )
         return openAI.completion(completionRequest).choices.first().text
