@@ -32,7 +32,6 @@ class OpenAIAPIService(private val apiKey: String) {
         val (_, response, result) = apiUrl
             .httpPost()
             .header(Headers.CONTENT_TYPE, "application/json")
-            .header("Authorization", "Bearer $apiKey")
             .body(requestBody)
             .awaitStringResponseResult()
 
