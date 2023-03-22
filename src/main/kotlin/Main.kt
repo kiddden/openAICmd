@@ -2,7 +2,8 @@ import services.OpenAIAPIService
 import kotlin.system.exitProcess
 
 suspend fun main() {
-    val openAIAPIService = OpenAIAPIService()
+    val apiKey = System.getenv("OPENAI_API_KEY") ?: throw RuntimeException("OPENAI_API_KEY environment variable is not set")
+    val openAIAPIService = OpenAIAPIService(apiKey)
 
     while (true) {
         print("You: ")

@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.8.0"
+    kotlin("plugin.serialization") version "1.5.0"
     application
 }
 
@@ -11,9 +12,11 @@ repositories {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-client-okhttp:2.2.4")
-    implementation("org.slf4j:slf4j-simple:2.0.5")
-    implementation("com.aallam.openai:openai-client:3.1.0")
+    val ktorVersion = "2.2.4"
+    implementation("com.github.kittinunf.fuel:fuel:2.3.1")
+    implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:2.3.1")
+    implementation("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0")
     testImplementation(kotlin("test"))
 }
 
