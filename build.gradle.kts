@@ -12,7 +12,6 @@ repositories {
 }
 
 dependencies {
-    val ktorVersion = "2.2.4"
     implementation("com.github.kittinunf.fuel:fuel:2.3.1")
     implementation("com.github.kittinunf.fuel:fuel-kotlinx-serialization:2.3.1")
     implementation("com.github.kittinunf.fuel:fuel-coroutines:2.3.1")
